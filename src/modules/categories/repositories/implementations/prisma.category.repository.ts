@@ -18,7 +18,19 @@ export class PrismaCategoryRepository implements CategoryRepository {
   }
 
   async findByNameCategory(name: string): Promise<CategoryEntity | null> {
-    const category = await this.prisma.category.findUnique({ where: { name } });
+    const category = await this.prisma.category.findUnique({
+      where: { name },
+      include: {
+        product: {
+          select: {
+            id: true,
+            description: true,
+            name: true,
+            price: true,
+          },
+        },
+      },
+    });
 
     if (!category) {
       return null;

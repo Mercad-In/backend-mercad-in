@@ -15,5 +15,6 @@ import { PrismaCategoryRepository } from './repositories/implementations/prisma.
       useClass: PrismaCategoryRepository,
     },
   ],
+  exports: [CategoriesService, CategoryRepository],
 })
 export class CategoriesModule {}
