@@ -22,6 +22,11 @@ export class SupermarketController {
     return this.supermarketService.create(createSupermarketDto);
   }
 
+  @Get()
+  findAll() {
+    return this.supermarketService.findAll();
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.supermarketService.findOne(id);

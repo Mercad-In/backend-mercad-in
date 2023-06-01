@@ -32,6 +32,10 @@ export class SupermarketService {
     return await this.repository.create(data);
   }
 
+  async findAll() {
+    return this.repository.findAll();
+  }
+
   async findOne(id: string) {
     const supermarket = await this.repository.findById(id);
 

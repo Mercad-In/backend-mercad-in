@@ -9,6 +9,16 @@ import { Injectable } from '@nestjs/common';
 export class PrismaSupermarketRepository implements SupermarketRepository {
   constructor(private readonly prisma: PrismaService) {}
 
+  async findAll(): Promise<SupermarketEntity[] | null> {
+    const allregisters = await this.prisma.supermarket.findMany();
+
+    if (!allregisters) {
+      return null;
+    }
+
+    return allregisters;
+  }
+
   async findById(id: string): Promise<SupermarketEntity | null> {
     const supermarket = await this.prisma.supermarket.findUnique({
       where: { id },

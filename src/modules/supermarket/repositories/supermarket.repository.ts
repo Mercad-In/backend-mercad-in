@@ -4,6 +4,7 @@ import { SupermarketEntity } from '../entities/supermarket.entity';
 
 export abstract class SupermarketRepository {
   abstract findById(id: string): Promise<SupermarketEntity | null>;
+  abstract findAll(): Promise<SupermarketEntity[]>;
   abstract findByEmail(email: string): Promise<SupermarketEntity | null>;
   abstract create(data: CreateSupermarketDto): Promise<void>;
   abstract update(id: string, data: UpdateSupermarketDto): Promise<void>;
