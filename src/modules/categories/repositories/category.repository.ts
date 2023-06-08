@@ -1,7 +1,50 @@
-import { CategoryEntity } from '../entities/category.entity';
+import { Injectable } from '@nestjs/common';
+import { Category } from '../entities/category.entity';
+import { PrismaService } from '../../../prisma/prisma.service';
 
-export abstract class CategoryRepository {
-  abstract findById(id: number): Promise<CategoryEntity | null>;
-  abstract findByNameCategory(name: string): Promise<CategoryEntity | null>;
-  abstract findAll(): Promise<CategoryEntity[] | null>;
+@Injectable()
+export class CategoryRepository {
+  constructor(private readonly prisma: PrismaService) {}
+
+  async findById(id: number): Promise<Category | null> {
+    const category = await this.prisma.category.findUnique({ where: { id } });
+
+    if (!category) {
+      return null;
+    }
+
+    return category;
+  }
+
+  async findByNameCategory(name: string): Promise<Category | null> {
+    const category = await this.prisma.category.findUnique({
+      where: { name },
+      include: {
+        product: {
+          select: {
+            id: true,
+            description: true,
+            name: true,
+            price: true,
+          },
+        },
+      },
+    });
+
+    if (!category) {
+      return null;
+    }
+
+    return category;
+  }
+
+  async findAll(): Promise<Category[] | null> {
+    const categories = await this.prisma.category.findMany();
+
+    if (!categories) {
+      return null;
+    }
+
+    return categories;
+  }
 }
