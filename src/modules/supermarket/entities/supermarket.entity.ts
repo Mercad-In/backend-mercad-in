@@ -1,4 +1,4 @@
-export class SupermarketEntity {
+export class Supermarket {
   id: string;
   name: string;
   email: string;
