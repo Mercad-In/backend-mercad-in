@@ -6,13 +6,13 @@ import {
 import * as bcrypt from 'bcrypt';
 import { CreateSupermarketDto } from './dtos/create-supermarket.dto';
 import { UpdateSupermarketDto } from './dtos/update-supermarket.dto';
-import { PrismaSupermarketRepository } from './repositories/implementations/prisma.supermarket.repository';
 import { CreateSupermarketModel } from './models/create-supermarket.model';
 import { UpdateSupermarketModel } from './models/update-supermarket.model';
+import { SupermarketRepository } from './repositories/supermarket.repository';
 
 @Injectable()
 export class SupermarketService {
-  constructor(private readonly repository: PrismaSupermarketRepository) {}
+  constructor(private readonly repository: SupermarketRepository) {}
 
   async create(request: CreateSupermarketDto) {
     const { name, email, cnpj, password } = request;

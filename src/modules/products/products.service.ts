@@ -1,15 +1,15 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateProductDto } from './dtos/create-product.dto';
 import { UpdateProductDto } from './dtos/update-product.dto';
-import { PrismaProductRepository } from './repositories/implementations/prisma.product.repository';
 import { CreateProductModel } from './models/create-product.model';
-import { CategoryRepository } from '../categories/repositories/category.repository';
 import { UpdateProductModel } from './models/update-product.model';
+import { CategoryRepository } from '../categories/repositories/category.repository';
+import { ProductRepository } from './repositories/product.repository';
 
 @Injectable()
 export class ProductsService {
   constructor(
-    private readonly repository: PrismaProductRepository,
+    private readonly repository: ProductRepository,
     private readonly externalRepository: CategoryRepository,
   ) {}
 
