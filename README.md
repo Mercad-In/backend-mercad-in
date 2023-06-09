@@ -26,6 +26,8 @@ Descrição detalhada de todas as principais tecnologias e libs que fora utiliza
 - passport-jwt: v4.0.1,
 - jest: v28.1.3
 
+Para ver todas as libs presentes, acesse o arquivo [package.json](https://github.com/Mercad-In/backend-mercad-in/blob/master/package.json) do projeto.
+
 ## 📙 Tutorial de instalação
 Siga o passo a passo a seguir para instalar as dependências da aplicação.
 
