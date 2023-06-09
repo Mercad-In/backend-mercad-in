@@ -50,7 +50,7 @@ Para poder encerrar, basta apertar **CTRL + C** no terminal.
 
 ## 🏁 Pondo a aplicação para rodar
 
-Após instalar as dependências a aplicação já pode ser startada, aqui tutorial utilizaremos o comando para rodar a aplicação em desenvolvimento, mas é possível rodar utilizando outros comandos listados no arquivo package.json:
+Após instalar as dependências a aplicação já pode ser startada, aqui no tutorial utilizaremos o comando para rodar a aplicação em modo de desenvolvimento, mas é possível rodar utilizando outros comandos listados no arquivo package.json.
 ```
 npm run start:dev
 ```
