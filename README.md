@@ -26,3 +26,28 @@ Descrição detalhada de todas as principais tecnologias e libs que fora utiliza
 - passport-jwt: v4.0.1
 - jest: v28.1.3,
 
+## 📙 Manual de como rodar a aplicação
+Siga o passo a passo a seguir para rodar a aplicação na sua máquina.
+
+**Aviso:** Para executar o passo a passo a seguir é necessário ter configurado o Node.js e o git em sua máquina e ter noções básicas em comandos de terminal. 
+
+**1º Etapa:** Para clonar o projeto via git, digite o seguinte comando:
+```
+git clone https://github.com/Mercad-In/backend-mercad-in.git
+```
+
+**2º Etapa:** Após clonar o projeto e abrir em seu Vscode digite no terminal o comando para instalar todas as dependências do projeto:
+```
+npm i
+```
+
+**Obs.:** Como o projeto utiliza o banco de dados SQLite que é um banco de dados que fica armazenado localmente dentro do projeto, não é necessário se preocupar em fazer uma conexão, mas se você quiser trocar o banco de dados, siga o passo a passo no site da documentação do Prisma ORM.
+
+**3º Etapa:** Após instalar as dependências a aplicação já pode ser startada, aqui tutorial utilizaremos o comando para rodar a aplicação em desenvolvimento, mas é possível rodar utilizando outros comandos listados no arquivo package.json:
+```
+npm run start:dev
+```
+Para visualizar a documentação swagger da aplicação, digite a seguinte url:
+```
+localhost:4451/doc
+```
