@@ -34,6 +34,7 @@ export class AuthService {
       cnpj: user.cnpj,
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { password: _, ...data } = user;
 
     const jwtToken = await this.jwtService.signAsync(payload);
