@@ -8,5 +8,21 @@
 ![https://nestjs.com](https://img.shields.io/static/v1?label&?style=flat&logo=nestjs&logoColor=E0234E&message=nest.js&color=111)
 ![https://www.prisma.io](https://img.shields.io/static/v1?label&?style=flat&logo=prisma&logoColor=FFFFFF&message=prisma&color=2D3748)
 
-Aplicação back-end desenvolvido em TDD, utilizando as tecnologias Node.js, npm, Typescrit, Nest.js, PrismaORM e SQLite. Este projeto é um trabalho acadêmico desenvolvido para fins de estudo prático de aplicabilidade da ferramenta Jest para teste unitário e automatizado, em aplicações back-end que utilizam Node.js.
+Aplicação back-end desenvolvido em TDD, utilizando as tecnologias Node.js, e Nest.js. Este projeto é um trabalho acadêmico desenvolvido para fins de estudo prático de aplicabilidade da ferramenta Jest para teste unitário e automatizado, em aplicações back-end que utilizam Node.js.
+
+## 💻 Tecnologias
+Descrição detalhada de todas as principais tecnologias e libs que fora utilizadas no desenvolvimento do projeto:
+- @nestjs/cli: v9.0.0,
+- @nestjs/core: v9.0.0,
+- @nestjs/swagger: v6.3.0,
+- typescript: v4.7.4,
+- ts-node: v10.0.0
+- supertest: v6.1.3,
+- bcrypt: v5.1.0,
+- prisma: v4.13.0,
+- @prisma/client: v4.13.0
+- class-validator: v0.14.0,
+- passport: v0.6.0,
+- passport-jwt: v4.0.1
+- jest: v28.1.3,
 
