@@ -35,12 +35,10 @@ Siga o passo a passo a seguir para rodar a aplicação na sua máquina.
 ```
 git clone https://github.com/Mercad-In/backend-mercad-in.git
 ```
-
 **2º Etapa:** Após clonar o projeto e abrir em seu Vscode digite no terminal o comando para instalar todas as dependências do projeto:
 ```
 npm i
 ```
-
 **Obs.:** Como o projeto utiliza o banco de dados SQLite que é um banco de dados que fica armazenado localmente dentro do projeto, não é necessário se preocupar em fazer uma conexão, mas se você quiser trocar o banco de dados, siga o passo a passo no site da documentação do Prisma ORM.
 
 **3º Etapa:** Após instalar as dependências a aplicação já pode ser startada, aqui tutorial utilizaremos o comando para rodar a aplicação em desenvolvimento, mas é possível rodar utilizando outros comandos listados no arquivo package.json:
@@ -50,4 +48,17 @@ npm run start:dev
 Para visualizar a documentação swagger da aplicação, digite a seguinte url:
 ```
 localhost:4451/doc
+```
+
+### Acessando o editor do banco de dados
+Para poder acessar o editor do banco de dados da aplicação, pode ser usado o **Beekeeper Studio** ou via **Prisma Studio**. Para acessar via prisma studio digite o seguinte comando no terminal. Após a execução do comando, o prisma studio irá abrir em uma página do browser onde você poderá ter acesso ao editor do banco de dados do SQLite, e poderá adicionar e deletar os dados do banco:
+```
+npx prisma studio
+```
+Para poder encerrar, basta apertar **CTRL + C** no terminal.
+
+### Executando os testes
+Para executar as classes de teste da aplicação, basta executar o seguinte comando no terminal:
+```
+npm run test
 ```
