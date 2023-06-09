@@ -15,7 +15,7 @@ export class CategoriesService {
     return category;
   }
 
-  async findByNameCategory(name) {
+  async findByNameCategory(name: string) {
     const category = await this.repository.findByNameCategory(name);
 
     if (!category) {
