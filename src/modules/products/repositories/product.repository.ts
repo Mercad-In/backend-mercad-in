@@ -13,6 +13,13 @@ export class ProductRepository {
       where: {
         id,
       },
+      include: {
+        category: {
+          select: {
+            name: true,
+          },
+        },
+      },
     });
 
     if (!product) {

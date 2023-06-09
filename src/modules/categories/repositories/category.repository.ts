@@ -7,7 +7,20 @@ export class CategoryRepository {
   constructor(private readonly prisma: PrismaService) {}
 
   async findById(id: number): Promise<Category | null> {
-    const category = await this.prisma.category.findUnique({ where: { id } });
+    const category = await this.prisma.category.findUnique({
+      where: { id },
+      include: {
+        product: {
+          select: {
+            id: true,
+            categoryId: true,
+            name: true,
+            description: true,
+            price: true,
+          },
+        },
+      },
+    });
 
     if (!category) {
       return null;
@@ -39,7 +52,19 @@ export class CategoryRepository {
   }
 
   async findAll(): Promise<Category[] | null> {
-    const categories = await this.prisma.category.findMany();
+    const categories = await this.prisma.category.findMany({
+      include: {
+        product: {
+          select: {
+            id: true,
+            categoryId: true,
+            name: true,
+            description: true,
+            price: true,
+          },
+        },
+      },
+    });
 
     if (!categories) {
       return null;
