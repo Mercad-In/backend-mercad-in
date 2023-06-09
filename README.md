@@ -16,15 +16,15 @@ Descrição detalhada de todas as principais tecnologias e libs que fora utiliza
 - @nestjs/core: v9.0.0,
 - @nestjs/swagger: v6.3.0,
 - typescript: v4.7.4,
-- ts-node: v10.0.0
+- ts-node: v10.0.0,
 - supertest: v6.1.3,
 - bcrypt: v5.1.0,
 - prisma: v4.13.0,
-- @prisma/client: v4.13.0
+- @prisma/client: v4.13.0,
 - class-validator: v0.14.0,
 - passport: v0.6.0,
-- passport-jwt: v4.0.1
-- jest: v28.1.3,
+- passport-jwt: v4.0.1,
+- jest: v28.1.3
 
 ## 📙 Manual de como rodar a aplicação
 Siga o passo a passo a seguir para rodar a aplicação na sua máquina.
