@@ -37,7 +37,14 @@ Para clonar o projeto via git, digite o seguinte comando:
 ```
 git clone https://github.com/Mercad-In/backend-mercad-in.git
 ```
-Após clonar o projeto e abrir em seu Vscode digite no terminal o comando para instalar todas as dependências do projeto:
+Após clonar o projeto e abrir em seu Vscode crie um arquivo **.env** com as credenciais abaixo antes de instalar as dependências
+````
+DATABASE_URL="file:./dev.db"
+JWT_SECRET_KEY="sua chave"
+````
+**Obs.:** Você pode criar sua chave de várias formas, podendo ser um nome, uma senha, ou um hash.
+
+Após criar o **.env** digite no terminal o comando para instalar todas as dependências do projeto:
 ```
 npm i
 ```
