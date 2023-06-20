@@ -18,6 +18,7 @@ model Supermarket {
 model Product {
   id          Int      @id @default(autoincrement())
   categoryId  Int
+  img         String?
   name        String
   price       String
   description String

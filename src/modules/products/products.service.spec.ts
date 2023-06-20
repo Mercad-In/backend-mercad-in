@@ -24,6 +24,7 @@ describe('ProductsService', () => {
     await expect(
       productsService.create({
         categoryId: 404,
+        img: '',
         description: 'teste',
         name: 'teste',
         price: 'teste',
@@ -35,6 +36,7 @@ describe('ProductsService', () => {
     await expect(
       productsService.update(404, {
         categoryId: 4,
+        img: '',
         description: 'teste',
         name: 'teste',
         price: 'teste',

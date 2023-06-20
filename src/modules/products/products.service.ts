@@ -14,7 +14,7 @@ export class ProductsService {
   ) {}
 
   async create(request: CreateProductDto) {
-    const { categoryId, description, name, price } = request;
+    const { categoryId, img, description, name, price } = request;
 
     const categoryExists = await this.externalRepository.findById(categoryId);
 
@@ -24,6 +24,7 @@ export class ProductsService {
 
     const data: CreateProductModel = {
       categoryId: categoryId,
+      img: img,
       description: description,
       name: name,
       price: price,
@@ -57,7 +58,7 @@ export class ProductsService {
   }
 
   async update(id: number, request: UpdateProductDto) {
-    const { categoryId, description, name, price } = request;
+    const { categoryId, img, description, name, price } = request;
 
     const productExists = await this.repository.findById(id);
 
@@ -67,6 +68,7 @@ export class ProductsService {
 
     const data: UpdateProductModel = {
       categoryId: categoryId,
+      img: img,
       description: description,
       name: name,
       price: price,

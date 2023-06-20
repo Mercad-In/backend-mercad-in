@@ -9,6 +9,8 @@ export class CreateProductDto {
   @IsString()
   categoryId: number;
 
+  img?: string;
+
   @ApiProperty({
     type: String,
     default: 'Pastel',

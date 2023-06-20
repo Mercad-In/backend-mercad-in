@@ -55,6 +55,7 @@ export class ProductRepository {
 
   async create({
     categoryId,
+    img,
     description,
     name,
     price,
@@ -62,6 +63,7 @@ export class ProductRepository {
     const product = await this.prisma.product.create({
       data: {
         categoryId,
+        img,
         description,
         name,
         price,
@@ -73,7 +75,7 @@ export class ProductRepository {
 
   async save(
     id: number,
-    { categoryId, description, name, price }: UpdateProductDto,
+    { categoryId, img, description, name, price }: UpdateProductDto,
   ): Promise<Product> {
     const product = await this.prisma.product.update({
       where: {
@@ -81,6 +83,7 @@ export class ProductRepository {
       },
       data: {
         categoryId,
+        img,
         description,
         name,
         price,
