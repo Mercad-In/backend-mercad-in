@@ -26,6 +26,8 @@ Descrição detalhada de todas as principais tecnologias e libs que fora utiliza
 - passport-jwt: v4.0.1,
 - jest: v28.1.3
 
+Para ver todas as libs presentes, acesse o arquivo [package.json](https://github.com/Mercad-In/backend-mercad-in/blob/master/package.json) do projeto.
+
 ## 📙 Tutorial de instalação
 Siga o passo a passo a seguir para instalar as dependências da aplicação.
 
@@ -35,7 +37,14 @@ Para clonar o projeto via git, digite o seguinte comando:
 ```
 git clone https://github.com/Mercad-In/backend-mercad-in.git
 ```
-Após clonar o projeto e abrir em seu Vscode digite no terminal o comando para instalar todas as dependências do projeto:
+Após clonar o projeto e abrir em seu Vscode crie um arquivo **.env** com as credenciais abaixo antes de instalar as dependências
+````
+DATABASE_URL="file:./dev.db"
+JWT_SECRET_KEY="sua chave"
+````
+**Obs.:** Você pode criar sua chave de várias formas, podendo ser um nome, uma senha, ou um hash.
+
+Após criar o **.env** digite no terminal o comando para instalar todas as dependências do projeto:
 ```
 npm i
 ```
@@ -50,7 +59,7 @@ Para poder encerrar, basta apertar **CTRL + C** no terminal.
 
 ## 🏁 Pondo a aplicação para rodar
 
-Após instalar as dependências a aplicação já pode ser startada, aqui tutorial utilizaremos o comando para rodar a aplicação em desenvolvimento, mas é possível rodar utilizando outros comandos listados no arquivo package.json:
+Após instalar as dependências a aplicação já pode ser startada, aqui no tutorial utilizaremos o comando para rodar a aplicação em modo de desenvolvimento, mas é possível rodar utilizando outros comandos listados no arquivo package.json.
 ```
 npm run start:dev
 ```
