@@ -57,6 +57,7 @@ export class CategoryRepository {
         product: {
           select: {
             id: true,
+            img: true,
             categoryId: true,
             name: true,
             description: true,
