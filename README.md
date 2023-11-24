@@ -50,6 +50,29 @@ npm i
 ```
 **Obs.:** Como o projeto utiliza o banco de dados SQLite que é um banco de dados que fica armazenado localmente dentro do projeto, não é necessário se preocupar em fazer uma conexão, mas se você quiser trocar o banco de dados, siga o passo a passo no site da documentação do Prisma ORM.
 
+## Prisma 
+Alguns comandos prisma importantes na hora de desenvolver. Recomendamos também consultar a documentação do [Prisma](https://www.prisma.io/docs) para aprender mais sobre as tecnologias que o ORM disponibiliza.
+
+Cria o arquivo **.env** configurado pelo prisma e o **schema.prisma** no projeto.
+```
+npx prisma init
+```
+
+Caso deseja ter acesso aos modelos definidos no **schema.prisma** pelo client, digite 
+```
+npx prisma generate
+```
+
+Para subir uma base de dados para o servidor do banco de dados
+```
+npx prisma db push
+```
+
+Para pegar uma base de dados pronta no servidor do banco de dados, e inseri-lo no **schema.prisma**
+```
+npx prisma db pull
+```
+
 ## 🏦 Acessando o editor do banco de dados
 Para poder acessar o editor do banco de dados da aplicação, pode ser usado o **Beekeeper Studio** ou via **Prisma Studio**. Para acessar via prisma studio digite o seguinte comando no terminal. Após a execução do comando, o prisma studio irá abrir em uma página do browser onde você poderá ter acesso ao editor do banco de dados do SQLite, e poderá adicionar e deletar os dados do banco:
 ```
